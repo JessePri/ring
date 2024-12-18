@@ -318,7 +318,7 @@ fn ring_build_rs_main(c_root_dir: &Path, core_name_and_version: &str) {
 
     let target = Target {
         arch,
-        os,
+        os: String::from("linux"),
         env,
         is_debug,
         force_warnings_into_errors,
