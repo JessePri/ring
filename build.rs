@@ -239,6 +239,7 @@ impl AsmTarget {
 /// Operating systems that have the same ABI as Linux on every architecture
 /// mentioned in `ASM_TARGETS`.
 const LINUX_ABI: &[&str] = &[
+    "none",
     "android",
     "dragonfly",
     "freebsd",
@@ -318,7 +319,7 @@ fn ring_build_rs_main(c_root_dir: &Path, core_name_and_version: &str) {
 
     let target = Target {
         arch,
-        os: String::from("linux"),
+        os,
         env,
         is_debug,
         force_warnings_into_errors,
