@@ -239,7 +239,7 @@ impl AsmTarget {
 /// Operating systems that have the same ABI as Linux on every architecture
 /// mentioned in `ASM_TARGETS`.
 const LINUX_ABI: &[&str] = &[
-    "none,"
+    "none",
     "android",
     "dragonfly",
     "freebsd",
